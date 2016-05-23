@@ -1,0 +1,17 @@
+{% extends "panel/layout" %}
+
+{% block content %}
+    <p>Lorem Ipsum</p>
+{% endblock %}
+
+{% block javascripts %}
+    <script type="text/javascript">
+        jsloader.onLoad('core', function () {
+            "use strict";
+            require(['app/app', 'test'], function (app, test) {
+                console.log(app);
+                console.log(test);
+            });
+        });
+    </script>
+{% endblock %}

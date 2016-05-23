@@ -1,0 +1,52 @@
+(function (basePath) {
+    "use strict";
+
+    var modules = {};
+    <% path = Rails.root.join(*%w( app assets javascripts modules)) %>
+    <% files = Dir.glob(path.join(*%w( ** *.js))) %>
+    <% files += Dir.glob(path.join(*%w( ** *.js.erb))) %>
+    <% files.each do |file| %>
+    <% module_name = file[0, file.index('.')] %>
+    <% module_filename = javascript_path(module_name.sub(Rails.root.to_s + '/app/assets/javascripts/', '')) %>
+    modules['<%= module_name.sub(path.to_s + '/', '') %>'] = '<%= module_filename.sub('.js', '')  %>';
+    <% end %>
+
+    startapp({
+        "timeout": 60000,
+        "res": {
+            "resources": {
+                "framework": [{
+                    "url": ["<%= javascript_path('webui/engine/js/framework/framework.js') %>"],
+                    "async": true
+                }],
+                "core": [{
+                    "url": ["<%= javascript_path('webui/engine/js/core/core.js') %>"],
+                    "async": true
+                }],
+                "theme": [{
+                    "url": ["<%= javascript_path('panel.js') %>"],
+                    "async": true
+                }]
+            },
+            "dependencies": {
+                "framework": [],
+                "core": ["framework"],
+                "theme": ["core"]
+            },
+            "unknown": []
+        },
+        "translations": {},
+        "locale": "<%= I18n.locale %>",
+        "path": {
+            "base": basePath,
+            "webui": basePath + "assets/webui/webui",
+            "webui_engine": basePath + "assets/webui/engine"
+        },
+        "requirejs": {
+            "paths": modules
+        },
+        "cssloader": {
+            "select2": "style/select2/select2"
+        }
+    });
+}('/'));
