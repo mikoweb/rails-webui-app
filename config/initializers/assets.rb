@@ -8,12 +8,12 @@ Rails.application.config.assets.version = '1.0'
 
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
-Rails.application.config.assets.precompile += [
-    'panel.js',
-    'startapp.js.erb',
-    '*webui/webui/vendor/*.js',
-    '*webui/engine/js/*.js',
-    '*modules/*.js',
-    '*modules/*.js.erb',
-    'panel/theme.scss'
-]
+Rails.application.config.assets.precompile = %w(
+    panel.js
+    startapp.js.erb
+    webui/webui/vendor/*.js
+    webui/engine/js/*.js
+    modules/*.js
+    modules/*.js.erb
+    panel/theme.scss
+)
