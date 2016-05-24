@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="<%= I18n.locale %>">
+<head>
+    <meta charset="utf-8">
+    <title><% if content_for?(:title) %><%= yield :title %><% else %>My Panel<% end %></title>
+    <%= yield :stylesheets %>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag 'panel/theme' %>
+    <%= javascript_include_tag 'webui/engine/js/loader.min' %>
+    <%= javascript_include_tag 'startapp' %>
+</head>
+<body<%= yield :body_attributes %><% if content_for?(:body_attributes) %><% else %> class="layout-container ls-top-navbar layout-sidebar-l3-md-up"<% end %>>
+    <%= render 'panel/layout' %>
+    <%= yield :javascripts %>
+    <script type="text/javascript">jsloader.init();</script>
+</body>
+</html>

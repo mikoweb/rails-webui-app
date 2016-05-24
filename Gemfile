@@ -51,7 +51,4 @@ group :development do
   gem 'memory_profiler'
 end
 
-gem 'liquid', '>= 4.0.0.rc2'
-gem 'liquid4-blocks', '~> 0.7.0'
-gem 'liquid-rails-extensions', '~> 0.0.4'
 gem 'font-awesome-rails'

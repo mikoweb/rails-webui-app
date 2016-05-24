@@ -1,0 +1,22 @@
+<nav class="navbar navbar-light bg-white navbar-full navbar-fixed-top ls-left-sidebar">
+    <button class="navbar-toggler hidden-md-up pull-xs-right" type="button" data-toggle="collapse" data-target="#navbar">
+        <i class="fa fa-bars" aria-hidden="true" aria-label="Toggle navbar"></i>
+    </button>
+    <button class="navbar-toggler hidden-md-up pull-xs-left" type="button" data-toggle="sidebar" data-target="#sidebar">
+        <i class="fa fa-bars" aria-hidden="true" aria-label="Toggle sidebar"></i>
+    </button>
+</nav>
+<nav class="sidebar sidebar-left sidebar-size-3 sidebar-visible-md-up sidebar-dark bg-primary simplebar sidebar-visible" id="sidebar">
+    <a class="sidebar-brand sidebar-brand-border sidebar-brand-bg m-b-0" href="<%= root_path %>">My Panel</a>
+    <ul class="sidebar-menu sm-active-button-bg">
+        <li class="sidebar-menu-item">
+            <a href="<%= page_index_path %>" class="sidebar-menu-button">
+                <i class="sidebar-menu-icon fa fa-book" aria-hidden="true"></i>
+                Strony
+            </a>
+        </li>
+    </ul>
+</nav>
+<main class="layout-content">
+    <div class="container-fluid"><%= yield %></div>
+</main>

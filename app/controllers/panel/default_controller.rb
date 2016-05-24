@@ -1,5 +1,6 @@
-class Panel::DefaultController < ApplicationController
-  def index
-    render 'panel/default/index.liquid'
+module Panel
+  class DefaultController < ApplicationController
+    def index
+    end
   end
 end

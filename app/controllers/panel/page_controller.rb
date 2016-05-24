@@ -1,7 +1,7 @@
-class Panel::PageController < ApplicationController
-  def index
-    render 'panel/page/index.liquid', :locals => {
-        :pages => Page.all,
-    }
+module Panel
+  class PageController < ApplicationController
+    def index
+      @pages = Page.all
+    end
   end
 end
