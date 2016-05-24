@@ -113,18 +113,18 @@ $ssm-iconsblock-width:              $ssm-icon-font-size + $ssm-iconsblock-spacin
 
 // menu toggle button indicator
 $sm-toggle-font-size:               $sm-button-font-size !default;
-// $sm-toggle-family:                  "FontAwesome" !default;
+$sm-toggle-family:                  "FontAwesome" !default;
 // $sm-toggle-icon:                    "\f067" !default; // plus
 // $sm-open-toggle-icon:               "\f068" !default; // minus
-// $sm-toggle-icon:                    "\f078" !default; // chevron-down
-// $sm-open-toggle-icon:               "\f077" !default; // chevron-up
+$sm-toggle-icon:                    "\f078" !default; // chevron-down
+$sm-open-toggle-icon:               "\f077" !default; // chevron-up
 
 // See Material Icons:
 // - https://design.google.com/icons/
 // - https://github.com/google/material-design-icons/blob/master/iconfont/codepoints
-$sm-toggle-family:                  "Material Icons" !default;
-$sm-toggle-icon:                    "\e5db" !default;
-$sm-open-toggle-icon:               "\e5d8" !default;
+//$sm-toggle-family:                  "Material Icons" !default;
+//$sm-toggle-icon:                    "\e5db" !default;
+//$sm-open-toggle-icon:               "\e5d8" !default;
 
 // label
 $sm-label-spacing-horizontal:       .3rem !default;
@@ -151,20 +151,14 @@ $sm-dropdown-hover-color:           $dropdown-link-hover-color !default;
 $sm-dropdown-hover-bg:              rgba(0, 0, 0, .05) !default;
 
 // dropdown toggle button indicator
-// See Material Icons:
-// - https://design.google.com/icons/
-// - https://github.com/google/material-design-icons/blob/master/iconfont/codepoints
-$sm-dropdown-toggle-family:         "Material Icons" !default;
-$sm-dropdown-toggle-icon:           "\e313" !default; // keyboard_arrow_down
-$sm-dropdown-open-toggle-icon:      "\e315" !default; // keyboard_arrow_right
+$sm-dropdown-toggle-family:         "FontAwesome" !default;
+$sm-dropdown-toggle-icon:           "\f078" !default; // keyboard_arrow_down
+$sm-dropdown-open-toggle-icon:      "\f077" !default; // keyboard_arrow_right
 
 // collapse toggle button indicator
-// See Material Icons:
-// - https://design.google.com/icons/
-// - https://github.com/google/material-design-icons/blob/master/iconfont/codepoints
-$sm-collapse-toggle-family:         "Material Icons" !default;
-$sm-collapse-toggle-icon:           "\e313" !default; // keyboard_arrow_down
-$sm-collapse-open-toggle-icon:      "\e316" !default; // keyboard_arrow_up
+$sm-collapse-toggle-family:         "FontAwesome" !default;
+$sm-collapse-toggle-icon:           "\f078" !default; // keyboard_arrow_down
+$sm-collapse-open-toggle-icon:      "\f077" !default; // keyboard_arrow_up
 
 //////////////////
 // SIDEBAR DARK //
