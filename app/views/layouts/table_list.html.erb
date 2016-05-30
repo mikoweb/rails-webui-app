@@ -1,0 +1,11 @@
+<% content_for :content do %>
+    <%= yield :list_toolbar %>
+    <section class="card">
+        <header class="card-header">
+            <%= yield :list_head %>
+            <%= yield :list_head_button %>
+        </header>
+        <%= yield %>
+    </section>
+<% end %>
+<%= render template: 'layouts/application' %>

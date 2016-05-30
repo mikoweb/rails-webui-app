@@ -18,5 +18,5 @@
     </ul>
 </nav>
 <main class="layout-content">
-    <div class="container-fluid"><%= yield %></div>
+    <div class="container-fluid"><%= content_for?(:content) ? yield(:content) : yield %></div>
 </main>

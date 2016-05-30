@@ -1,7 +1,46 @@
+<% content_for :list_head do %><h2 class="card-title">Strony</h2><% end %>
+
+<% content_for :list_toolbar do %>
+    <div class="btn-group--before-card" role="group">
+        <a class="btn btn-success" href="#">
+            <i class="fa fa-plus-circle" aria-hidden="true"></i>
+            Nowa strona
+        </a>
+    </div>
+<% end %>
+
 <% if @pages.length %>
-    <ul>
-        <% @pages.each do |page| %>
-        <li><%= page.title %></li>
-        <% end %>
-    </ul>
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+            <thead>
+            <tr>
+                <th class="th--tight text-xs-center">Id</th>
+                <th class="th--tight">Akcje</th>
+                <th>Tytuł</th>
+            </tr>
+            </thead>
+            <tbody class="tbody--valigin-middle">
+            <% @pages.each do |page| %>
+            <tr>
+                <td class="text-xs-center"><%= page.id %></td>
+                <td>
+                    <div class="btn-group btn-group-td" role="group" aria-label="Akcje">
+                        <a class="btn btn-default btn-sm"
+                           href="#"
+                           title="Edytuj">
+                            <span class="fa fa-edit"></span>
+                        </a>
+                        <a class="btn btn-danger btn-sm"
+                           href="#"
+                           title="Usuń">
+                            <span class="fa fa-remove"></span>
+                        </a>
+                    </div>
+                </td>
+                <td><%= page.title %></td>
+            </tr>
+            <% end %>
+            </tbody>
+        </table>
+    </div>
 <% end %>
