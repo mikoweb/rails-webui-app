@@ -13,17 +13,16 @@ module Panel
     end
 
     def post_new
-      @page = Page.new
+      @page = Page.new(params.require(:page).permit(:title, :content))
+      @page.valid?
 
       render 'panel/page/new'
     end
 
     def get_edit
-
     end
 
     def put_edit
-
     end
   end
 end

@@ -1,5 +1,5 @@
-<%= form_for @page, url: {action: 'post_new'} do |f| %>
-    <%= f.text_field :title %>
-    <%= f.text_area :content %>
-    <%= f.submit "Zapisz" %>
+<%= simple_form_for @page, url: page_post_new_path do |f| %>
+    <%= f.input :title %>
+    <%= f.input :content, :as => :text %>
+    <%= f.submit 'Zapisz' %>
 <% end %>
