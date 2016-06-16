@@ -53,3 +53,4 @@ end
 
 gem 'font-awesome-rails'
 gem 'simple_form'
+gem 'rails_webui', '~> 0.0.1'
